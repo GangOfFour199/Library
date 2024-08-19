@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Movie Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div id="header-title"><strong>Sandinista Technologies</strong></div>
+    <ul id="header-links">
+        <a href="https://gangoffour199.github.io/Sign-up-form/">Sign Up</a>
+        <a href="https://gangoffour199.github.io/Dashboard/">Dashboard</a>
+        <a href="https://gangoffour199.github.io/Calculator/">More Tools</a>
+    </ul>
+    </div>
+</header>
+<main>
+<div class="title-container">
+    <div class="library-title"><strong>Your Movie Library</strong></div>
+    <div class="library-subtitle"><em>Add your favourite movies below...</em></div>
+</div>
+<div class="movie-container">
+    <div class="card-content">
+        <div class="movie-card" id="movie-card">
+            <div class="card-image">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg" alt="Pulp Fiction poster (1994)">
+            </div>
+            <div class="card-text">
+                <div class="movie-title"><strong>Pulp Fiction</strong></div>
+                <div class="movie-year">Year Released: 1994</div>
+                <div class="movie-director">Director: Quentin Tarantino</div>
+                <div class="movie-rating">IMDB Rating: <a href="https://www.imdb.com/title/tt0110912/">8.9/10</a></div>
+                <div class="movie-watched">Already seen?</div><label class="switch"><input type="checkbox"><span class="slider-round"></span></label>
+            </div>
+            <button id="remove-movie-button">Remove</button>
+        </div>
+        <div class="movie-card">
+            <div class="card-image">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Parasite_%282019_film%29.png" alt="Parasite Poster (2019)">
+            </div>
+            <div class="card-text">
+                <div class="movie-title"><strong>Parasite</strong></div>
+                <div class="movie-year">Year Released: 2019</div>
+                <div class="movie-director">Director: Bong Joon Ho</div>
+                <div class="movie-rating">IMDB Rating: <a href="https://www.imdb.com/title/tt6751668/">8.5/10</a></div>
+                <div class="movie-watched">Already seen?</div><label class="switch"><input type="checkbox"><span class="slider-round"></span></label>
+            </div>
+            <button id="remove-movie-button">Remove</button>
+        </div>
+        <div class="movie-card">
+            <div class="card-image">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/fe/Withnail_and_i_poster.jpg" alt="Withnail & I Poster (1987)">
+            </div>
+            <div class="card-text">
+                <div class="movie-title"><strong>Withnail and I</strong></div>
+                <div class="movie-year">Year Released: 1987</div>
+                <div class="movie-director">Director: Bruce Robinson</div>
+                <div class="movie-rating">IMDB Rating: <a href="https://www.imdb.com/title/tt0094336/">7.5/10</a></div>
+                <div class="movie-watched">Already seen?</div><label class="switch"><input type="checkbox"><span class="slider-round"></span></label>
+            </div>
+            <button id="remove-movie-button">Remove</button>
+        </div>
+        <div class="movie-card">
+            <div class="card-image">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Leon-poster.jpg" alt="Leon: The Profesional Poster (1994)">
+            </div>
+            <div class="card-text">
+                <div class="movie-title"><strong>Leon: The Professional</strong></div>
+                <div class="movie-year">Year Released: 1994</div>
+                <div class="movie-director">Director: Luc Besson</div>
+                <div class="movie-rating">IMDB Rating: <a href="https://www.imdb.com/title/tt0110413/">8.5/10</a></div>
+                <div class="movie-watched">Already seen?</div><label class="switch"><input type="checkbox"><span class="slider-round"></span></label>
+            </div>
+            <button id="remove-movie-button">Remove</button>
+        </div>
+    </div>
+<div class="dynamic-container">
+    <div class="dynamic-content"></div>
+</div>
+<div class="add-movie">
+    <button id="add-movie-button">
+        Add a movie +
+    </button>
+</div>
+<div id="popupOverlay" class="overlay-container">
+<div class="popup-box">
+    <h2>Sandinista Technologies</h2>
+    <h5>Add to your favourites</h5>
+    <form class="form-container" id="pop-up-form">
+        <label class="form-label" for="popup-title">Title</label>
+        <input class="form-input" type="text" placeholder="Title" id="popup-title" name="popup-name" required>
+
+        <label class="form-label" for="popup-year">Year Released</label>
+        <input class="form-input" type="number" min="1900" max="2024" step="1" value="2024" id="popup-year" name="popup-year" required>
+
+        <label class="form-label" for="popup-director">Director</label>
+        <input class="form-input" type="text" placeholder="Director's Name" id="popup-director" name="popup-director" required>
+
+        <label class="form-label" for="popup-rating">IMDB Rating</label>
+        <input class="form-input" type="text" placeholder="Ex. 7.1/10" id="popup-rating" name="popup-rating" required>
+        
+        <button class="btn-submit-popup" type="submit">Submit</button>
+    </form>
+    <button class="btn-close-popup" onclick="hidePopUp()">Close</button>
+</div>
+</div>
+<div class="feedback-container">
+    <div class="feedback-title"><strong>Have your Say!</strong></div>
+    <div class="feedback-content">
+        <div class="feedback-text">
+            <div class="feedback-message">We are always striving to improve our services, to ensure an optimal experience for all our users. If you feel there is something that can be changed or improved upon, don't hesitate to contact us! Please let us know your thoughts in the box provided on your right. We look forward to hearing from you and we guarantee we will take everybody's ideas & opinions into account. Thank you!</div>
+        </div>
+        <div class="comment box">
+            <textarea rows="8" cols="50">Provide your thoughts here...</textarea>
+        </div>
+    </div>
+    <div class="comment-button">
+        <button id="submit-comment" type="submit">Submit</button>
+    </div>
+</div>
+</main>
+<div class="footer">
+    <p>Copyright &copy; of Sandinista Technologies 2024</p>
+    <div class="subscribe">
+        <div class="subscribe-message">Sign up for our weekly newsletter!</div>
+        <input type="email" id="email" placeholder="Join here" name="email_name"/>
+        <button id="subscribe-button" type="submit">Email Me</button>
+    </div>
+</div> 
+<script src="script.js"></script>  
+</body>
+</html>
