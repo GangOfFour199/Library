@@ -45,7 +45,7 @@ This Odin project assignment outlined a task of designing a library, in which us
 
 [Try the assignment on The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library)
 
-[Have a go with the calculator here!](https://gangoffour199.github.io/Calculator/)
+[Have a go with the library here!](https://gangoffour199.github.io/Library/)
 
 This markdown file was created using [dilinger.io](https://dillinger.io/)
 
