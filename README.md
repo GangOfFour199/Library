@@ -12,7 +12,7 @@ This Odin project assignment outlined a task of designing a library, in which us
 - 'Remove' buttons which delete the specifically selected movie.
 - A pop up form which allows for numeric and text inputs that are required in order to submit the form.
 - Once form is submitted, it displays the chosen movie with its details in a card identical to the examples on the page.
-- A slider which can be inetracted with to highlight whether user has watched the respective film or not. 
+- A slider which can be interacted with to highlight whether user has watched the respective film or not. 
 - Working links.
 - Text area element in which users can input their feedback.
 
