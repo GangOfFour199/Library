@@ -20,7 +20,7 @@ This Odin project assignment outlined a task of designing a library, in which us
 
 - Intermediate level use of HTML and CSS stylings
 - CSS grid layout.
-- Objects, object constructors and classes.
+- Objects, object constructors and factory functions.
 - DOM manipulation & events.
 - In particular, dynamic creation of elements via the DOM.
 - Arrays.
